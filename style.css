@@ -1,0 +1,35 @@
+@media(maxwidth: 300px) {
+  
+}
+#submit:hover {
+  transform:scale(1.1);
+}
+#header-title {
+  
+}
+
+#header {
+  align-self:center;
+  margin:auto;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-center;
+  top:10px;
+  height:120px;
+    
+}
+#header-img {
+  display: block;
+  width:100px;
+  position: absolute;
+  right: 10px;
+    top:10px;
+  
+  
+}
+#form {
+  display:flex;
+}
+.nav-link {
+  display:block;
+}
