@@ -4,8 +4,16 @@
 #submit:hover {
   transform:scale(1.1);
 }
+
+#header-txt {
+  background-color: rgb(43, 86, 226);
+  display:flex;
+  width: vw;
+  flex-direction: row;  
+  height: 150px;
+  align-self:center;
+}
 #header-title {
-  
 }
 
 #header {
@@ -20,7 +28,7 @@
 }
 #header-img {
   display: block;
-  width:100px;
+  width:200px;
   position: absolute;
   right: 10px;
     top:10px;
@@ -32,4 +40,13 @@
 }
 .nav-link {
   display:block;
+}
+.callButton {
+  align-self:center;
+  margin:auto;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-center;
+  top:10px;
+  height:500px;
 }
