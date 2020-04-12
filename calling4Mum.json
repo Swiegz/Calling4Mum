@@ -1,0 +1,10 @@
+{
+    "name": "Calling4Mum",
+    "version": "0.0.0",
+    "description":"This is a video call app with a very basic interface that I am developing as a learning project",
+    "author": {
+        "name": "Rob",
+        "email": "rob@schwiegerfamily.net",
+        "url": "https://swiegs.net"
+      }
+}

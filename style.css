@@ -1,26 +1,30 @@
-@media(maxwidth: 300px) {
-  
+@media(maxwidth: 500px) {
+  #header-txt {
+    color:yellow;
+  }
 }
 #submit:hover {
   transform:scale(1.1);
 }
 
 #header-txt {
-  background-color: rgb(43, 86, 226);
-  display:flex;
-  width: vw;
-  flex-direction: row;  
-  height: 150px;
-  align-self:center;
+  background-color: black;
+  color: blue;
+  display:fixed;
+  width: 100%;
+  height: Auto;
+  text-align:center;
+  border-width: 10px;
+  border-style:solid;
 }
-#header-title {
+#body-id {
+  background-color: black;
 }
 
 #header {
-  align-self:center;
+  align-items:center;
   margin:auto;
-  display:flex;
-  flex-direction: row;
+  display:fixed;
   justify-content: space-center;
   top:10px;
   height:120px;
@@ -28,7 +32,7 @@
 }
 #header-img {
   display: block;
-  width:200px;
+  width:auto;
   position: absolute;
   right: 10px;
     top:10px;
@@ -38,15 +42,43 @@
 #form {
   display:flex;
 }
+
+#myVideoCall {
+  width: 300px;
+  height:300px;
+  border-width: 50px;
+  border-style:solid;
+  border-color:purple;
+}
+}
 .nav-link {
   display:block;
 }
-.callButton {
-  align-self:center;
-  margin:auto;
+.call-button-containers{
   display:flex;
   flex-direction: row;
-  justify-content: space-center;
+  flex-wrap: wrap;
+}
+
+.callButton {
+  
+  align-self:flex-start;
+  
+  
+  align-items: flex-start;
   top:10px;
-  height:500px;
+  width: 30%;
+  height:auto;
+  border-radius:20%;
+  border-width:10px;
+  border-color:darkblue;
+  box-shadow: 5px,5px,5px,5px,darkcyan;
+  border-style:solid;
+  min-width: 150px;
+  min-height: 150px;
+  
+}
+.callButton:hover {
+  border-color:yellow;
+  transform:scale(1.1);
 }
