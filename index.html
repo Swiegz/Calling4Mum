@@ -83,10 +83,18 @@ app.signInManager.signIn ({
   <div id=myVideoCall width=500px height=500px ></div>
   <script>
  
-  console.log("past");
-  document.getElementById("header-txt").addEventListener("click", function() {myFunction()});
-  document.getElementById("body-id").addEventListener("click", function() {openFullscreen()});
-  document.getElementById("karen-img").addEventListener("click", function() {openFullscreen()});
+  
+ let theseElements= document.getElementsByClassName("callButton");
+ alert(theseElements.length);
+ openFullScreen(theseElements[1].id)
+ //for (let i=0; i<theseElements.length;i++) {
+   alert(theseElements[1].id);
+   theseElements[1].addEventListner("click",function() {openFullScreen(theseElements[1].id)});
+  // };  
+ // document.getElementById("header-txt").addEventListener("click", function() {myFunction()});
+ document.getElementById("body-id").addEventListener("onkeyup", function() {openFullscreen("body-id")});
+ //document.getElementById("body-id").addEventListener("click", function() {openFullscreen("body-id")});
+ document.getElementById("karen-img").addEventListener("click", function() {openFullscreen("karen-img")});
   console.log("at end");
   </script>
   </main>
