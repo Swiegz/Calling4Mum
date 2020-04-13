@@ -5,12 +5,14 @@ function myFunction() {
     document.getElementById("header-txt").innerHTML=rob;
     document.getElementById("karen-img").style.borderColor="green";
 }  
-function onCallClick () {
-   openFullscreen();
+// This function handles click events
+function onCallClick (clickObjectId) {
+   openFullscreen(clickObjectId);
 
 }
-function openFullscreen() {
-  var elem1=document.getElementById("karen-img");
+// This function opens the element represented by the passed id in full screen mode
+function openFullscreen(whatToOpen) {
+  var elem1=document.getElementById(whatToOpen);
   elem1.style.borderColor="green";
   if (elem1.fullscreenChanged) {
         elem1.exitFullscreen();
