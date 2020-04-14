@@ -1,50 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <link rel="stylesheet" type="text/css" href="style.css" />
-<script src="https://swx.cdn.skype.com/shared/v/1.2.35/SkypeBootstrap.min.js"></script>
 <script type="text/javascript" src="jsfile.js"></script>
-
-<!--// <script src="https://swx.cdn.skype.com/shared/v/1.2.35/SkypeBootstrap.min.js"></script>
-
-Code for SDK ... come back to this 
-<script>
-// Reference to SkypeBootstrap.min.js
-// Implements the Skype object model via https://swx.cdn.skype.com/shared/v/1.2.35/SkypeBootstrap.min.js
-
-// Call the application object
-var config = {
- apiKey: 'a42fcebd-5b43-4b89-a065-74450fb91255', // SDK
- apiKeyCC: '9c967f6b-a846-4df2-b43d-5167e47d81e1' // SDK+UI
-}; 
-var Application
-
-Skype.initialize({ apiKey: config.apiKey }, function (api) {
-        window.skypeWebApp = new api.application();
-        //Make sign in table appear 
-        $(".menu #sign-in").click();
-        // whenever client.state changes, display its value
-        window.skypeWebApp.signInManager.state.changed(function (state) {
-            $('#client_state').text(state);
-        });
-    }, function (err) {
-        console.log(err);
-        alert('Cannot load the SDK.');
-    });
-
-// Sign-in code typically follows here.
-app = new Application;
-
-app.signInManager.signIn ({
-  username: '****',
-  password: '****'
-}).then(() => {
-  console.log("signed in as", app.personsAndGroupsManager.mePerson.displayName());
-}, err => {
-  console.log("cannot sign in", err);
-});
--->
-
-
 
 <body id="body-id">
   <script>
@@ -57,46 +14,39 @@ app.signInManager.signIn ({
 </header>
 
 <main>
-  <div id="call_32" style="width:20%;background-color:#0094ff">
-    <!--<script type="text/javascript">
-         Skype.ui({
-             name: "call",
-             element: "call_32",
-             participants: ["helen@schwiegerfamily.net"],
-             imageSize: 32,
-             imageColor: "white"
-         });
-     </script>  -->
- </div> 
-
-
+  
   <div id="call-buttons-containers"> 
-  <a id="link-dad" href="skype:helen@schwiegerfamily.net?call&amp;video=true"> 
-  <img class="callButton" id="dad-img" src=".\Dad.JPG" alt="Dad" ></a>
-  <img class="callButton" id="mum-img" src=".\Mum.JPG" alt="Mum" onclick="callButtonClick(this, 'helen@schwiegerfamily.net')">
-  <img class="callButton" id="rob-img" src=".\Rob.JPG" alt="Rob" >
-  <img class="callButton" id="lynn-img" src=".\Lynn.JPG" alt="Lynn">
-  <img class="callButton" id="karen-img" src=".\Karen.JPG" alt="Karen">
-  <img class="callButton" id="andrew-img" src=".\Andrew.JPG" alt="Andrew">
-  <img class="callButton" id="helen-img" src=".\Helen.JPG" alt="Helen">
+    <img class="callButton" id="dad-img" src=".\Dad.JPG" alt="Dad" >
+    <img class="callButton" id="mum-img" src=".\Mum.JPG" alt="Mum" >
+    <img class="callButton" id="rob-img" src=".\Rob.JPG" alt="Rob" >
+    <img class="callButton" id="lynn-img" src=".\Lynn.JPG" alt="Lynn">
+    <img class="callButton" id="karen-img" src=".\Karen.JPG" alt="Karen">
+    <img class="callButton" id="andrew-img" src=".\Andrew.JPG" alt="Andrew">
+    <img class="callButton" id="helen-img" src=".\Helen.JPG" alt="Helen">
   </div>
+  <script> callButtonListeners();  </script>
+
   <div id=myVideoCall width=500px height=500px ></div>
-  <script>
  
   
- let theseElements= document.getElementsByClassName("callButton");
- alert(theseElements.length);
- openFullScreen(theseElements[1].id)
- //for (let i=0; i<theseElements.length;i++) {
-   alert(theseElements[1].id);
-   theseElements[1].addEventListner("click",function() {openFullScreen(theseElements[1].id)});
-  // };  
- // document.getElementById("header-txt").addEventListener("click", function() {myFunction()});
- document.getElementById("body-id").addEventListener("onkeyup", function() {openFullscreen("body-id")});
- //document.getElementById("body-id").addEventListener("click", function() {openFullscreen("body-id")});
- document.getElementById("karen-img").addEventListener("click", function() {openFullscreen("karen-img")});
-  console.log("at end");
-  </script>
+  <div id="callScreen">
+    <div id=callerButton>
+      
+    </div>
+    <div id="incall-buttons-containers"> 
+      <img class="incallButton" id="ic-dad-img" src=".\Dad.JPG" alt="Dad" >
+      <img class="incallButton" id="ic-mum-img" src=".\Mum.JPG" alt="Mum" >
+      <img class="incallButton" id="ic-rob-img" src=".\Rob.JPG" alt="Rob" >
+      <img class="incallButton" id="ic-lynn-img" src=".\Lynn.JPG" alt="Lynn">
+      <img class="incallButton" id="ic-karen-img" src=".\Karen.JPG" alt="Karen">
+      <img class="incallButton" id="ic-andrew-img" src=".\Andrew.JPG" alt="Andrew">
+      <img class="incallButton" id="ic-helen-img" src=".\Helen.JPG" alt="Helen">
+    </div>
+  </div>
+  <script> //callButtonListeners();  </script>
+
+
+
   </main>
 </body>
 </html>
