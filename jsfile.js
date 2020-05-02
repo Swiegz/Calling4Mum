@@ -2,8 +2,10 @@ const rob="Robert Schwieger";
 console.log("Entering .js file");
 
 function myFunction() {
+    console.log("in myFunction");
     document.getElementById("header-txt").innerHTML=rob;
-    document.getElementById("karen-img").style.borderColor="green";
+    console.log("still in myFunction");
+    notifyMe("Calling notification");
 } 
 // Set up listeners for Call buttons 
 function callButtonListeners() {
@@ -16,7 +18,7 @@ function callButtonListeners() {
      console.log(typeof thisId + "       "+ thisId);
      thisElement.addEventListener("click", function() {openFullscreen(thisId)});
     };  
-  console.log("at end");
+  console.log("at end of call button listeners");
 } 
 
 // This function handles click events

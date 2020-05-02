@@ -4,6 +4,10 @@
   }
 }
 
+#myPoint {
+  color: yellow;
+}
+
 #header-txt {
   background-color: black;
   color:blue;
@@ -46,6 +50,14 @@
   border-color:purple;
 }
 
+/* Style the video: 100% width and height to cover the entire window */
+.fullVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
 .nav-link {
   display:block;
 }
@@ -73,4 +85,8 @@
 .callButton:hover {
   border-color:yellow;
   transform:scale(1.1);
+}
+
+.mdc-floating-label {
+  
 }
